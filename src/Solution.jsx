@@ -37,13 +37,13 @@ function Solution() {
       <Label>Display table below</Label>
       {/* Put table component here */}
 
-      <Table>
-        {columns.map((col) => (
+      <Table
+        columns={columns.map((col) => (
           <TableColumn scope="col" onClick={() => handleColumnClick({ col })}>
             <Label>{col}</Label>
           </TableColumn>
         ))}
-
+      >
         {tableData.map((item) => (
           <TableRow key={item.id}>
             <TableCell>
